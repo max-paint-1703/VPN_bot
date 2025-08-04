@@ -59,7 +59,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"Привет, {user.first_name}!\n"
         "Используй команду /get_config чтобы запросить VPN-конфиг\n\n"
         f"⚠️ Для работы бота необходимо:\n"
-        "1. Начать приватный чат со мной (@{BOT_USERNAME})\n"
+        "1. Начать приватный чат со мной (@KaratVpn_bot)\n"
         "2. Не блокировать бота\n"
         "3. Ожидать подтверждения администратора"
     )
@@ -76,7 +76,7 @@ async def get_config(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logger.error(f"Чат с пользователем {user.id} недоступен: {e}")
         await update.message.reply_text(
             f"⚠️ Для выдачи конфига необходимо начать приватный чат с ботом.\n"
-            f"Пожалуйста, напишите мне в личные сообщения @{BOT_USERNAME}"
+            f"Пожалуйста, напишите мне в личные сообщения @KaratVpn_bot"
         )
         return
     
